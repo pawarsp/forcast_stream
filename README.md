@@ -48,3 +48,53 @@ cd film-stream-forecaster
 
 # Sync all production and dev dependencies (creates .venv automatically)
 uv sync --all-groups
+
+```
+
+### 2. Running the Application
+
+Start the FastAPI application using Uvicorn via `uv`:
+
+```bash
+uv run uvicorn app.main:app --reload
+
+```
+
+Upon startup, the server log banner will display local interactive documentation URLs:
+
+```text
+============================================================
+ 🚀 FILM STREAM FORECASTING API STARTED
+ 📖 Interactive Swagger UI Docs: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+ 📑 ReDoc UI Docs:               [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+ 🟢 Health Check:                [http://127.0.0.1:8000/healthz/live](http://127.0.0.1:8000/healthz/live)
+============================================================
+
+```
+
+### 3. Running Tests
+
+Run the complete asynchronous test suite using `pytest`:
+
+```bash
+# Run all tests with verbose output
+uv run pytest -v
+
+# Run tests with code coverage report
+uv run pytest --cov=app
+
+```
+
+### 4. Code Formatting & Validation
+
+Ensure the codebase conforms to `black` formatting standards:
+
+```bash
+# Check formatting
+uv run black --check app tests
+
+# Apply auto-formatting
+uv run black app tests
+
+```
+---
