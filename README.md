@@ -15,7 +15,7 @@ Designed for downstream infrastructure autoscaling engines, load balancing, and 
 
 - **High-Resolution Forecasting:** Generates 96 continuous 15-minute interval predictions over a rolling 24-hour horizon.
 - **Confidence Bounds:** Calculates 95% confidence bounds (`lower` and `upper`) alongside expected stream counts using Poisson/Gaussian distribution noise modeling.
-- **Batch & Catalog Queries:** Predict for a single film ID, a batch of film IDs, or the entire catalog (`"all"`).
+- **Batch & Catalog Queries:** Predict for a single film ID, or a batch of film IDs.
 - **FastAPI Core:** Leverages asynchronous Python, Pydantic v2 data validation, and NumPy vectorization.
 - **Numpydoc Documented:** Fully typed and documented using strict NumPy-style docstring standards.
 - **Kubernetes Ready:** Includes `/healthz/live` and `/healthz/ready` probes for automated deployment orchestration.
